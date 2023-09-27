@@ -49,8 +49,8 @@ echo "</VirtualHost>" >> $pasta/$site1.conf
 
 #ligando o servidor/desligando o servidor padrao
 
-a2ensite $pasta/$site1.conf
-a2dissite $pasta/000-default.conf
+a2ensite $site1.conf
+a2dissite 000-default.conf
 systemctl restart apache2
 
 echo "deseja adicionar um git clone? (sim/nao)"
